@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>bonolo.shesha.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="T:bonolo.shesha.Common.Authorization.CommonRoles">
+            <summary>
+            shesha Role Names
+            </summary>
+        </member>
+        <member name="F:bonolo.shesha.Common.Authorization.CommonRoles.DataAdministrator">
+            <summary>
+            Data Administrator
+            </summary>
+        </member>
+        <member name="F:bonolo.shesha.Common.Authorization.CommonRoles.SystemAdministrator">
+            <summary>
+            System Administrator
+            </summary>
+        </member>
+        <member name="F:bonolo.shesha.Common.Authorization.CommonRoles.GlobalAdmin">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:bonolo.shesha.Common.Authorization.IsheshaPermissionChecker">
+            <summary>
+            shesha Permission checker
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.IsheshaPermissionChecker.IsDataAdministrator(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.IsheshaPermissionChecker.IsGlobalAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.IsheshaPermissionChecker.IsAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="T:bonolo.shesha.Common.Authorization.sheshaPermissionChecker">
+            <summary>
+            shesha Permission checker
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.#ctor(Abp.Domain.Repositories.IRepository{Shesha.Domain.Person,System.Guid},Abp.Domain.Repositories.IRepository{Shesha.Domain.ShaRoleAppointedPerson,System.Guid},Abp.Domain.Repositories.IRepository{Shesha.Domain.ShaRoleAppointmentEntity,System.Guid})">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsGrantedAsync(System.Int64,System.String)">
+            <summary>
+            inheritedDoc
+            </summary>
+            <param name="userId"></param>
+            <param name="permissionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsGranted(System.Int64,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="userId"></param>
+            <param name="permissionName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsInAnyOfRoles(Shesha.Domain.Person,System.String[])">
+            <summary>
+            inheritedDoc
+            </summary>
+            <param name="person"></param>
+            <param name="roles"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsDataAdministrator(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="M:bonolo.shesha.Common.Authorization.sheshaPermissionChecker.IsGlobalAdmin(Shesha.Domain.Person)">
+            <summary>
+            
+            </summary>
+            <param name="person"></param>
+            <returns></returns>
+        </member>
+        <member name="T:bonolo.shesha.DbmsHelper">
+            <summary>
+            Dbms configuration helper
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.DbmsHelper.GetDbmsType(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Get current Dbms type
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.DbmsHelper.GetDefaultConnectionString(Microsoft.Extensions.Configuration.IConfigurationRoot)">
+            <summary>
+            Get default connection string
+            </summary>
+            <param name="config"></param>
+            <returns></returns>
+        </member>
+        <member name="T:bonolo.shesha.Hangfire.HangfireAuthorizationFilter">
+            <summary>
+            Hangfire authorization filter: This should be obsolete since Shesha comes with Hangfire Authorization inbuilt
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.Hangfire.HangfireAuthorizationFilter.Authorize(Hangfire.Dashboard.DashboardContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+            <returns></returns>
+        </member>
+        <member name="T:bonolo.shesha.sheshaWebCoreModule">
+            <summary>
+            ReSharper disable once InconsistentNaming
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.sheshaWebCoreModule.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            
+            </summary>
+            <param name="env"></param>
+        </member>
+        <member name="M:bonolo.shesha.sheshaWebCoreModule.PreInitialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.sheshaWebCoreModule.Initialize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:bonolo.shesha.Swagger.ApiExplorerGroupPerControllerConvention">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:bonolo.shesha.Swagger.ApiExplorerGroupPerControllerConvention.Apply(Microsoft.AspNetCore.Mvc.ApplicationModels.ControllerModel)">
+            <summary>
+            
+            </summary>
+            <param name="controller"></param>
+        </member>
+        <member name="M:bonolo.shesha.Swagger.ApiExplorerGroupPerControllerConvention.GroupInclusionPredicate(System.String,Microsoft.AspNetCore.Mvc.ApiExplorer.ApiDescription)">
+            <summary>
+            
+            </summary>
+            <param name="docName"></param>
+            <param name="apiDescription"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Shesha.Identity.ExternalLoginInfoHelper">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Shesha.Identity.ExternalLoginInfoHelper.GetNameAndSurnameFromClaims(System.Collections.Generic.List{System.Security.Claims.Claim})">
+            <summary>
+            
+            </summary>
+            <param name="claims"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
