@@ -16,6 +16,7 @@ using Shesha.Import;
 using Shesha.Sms.Clickatell;
 using Shesha.Web.FormsDesigner;
 using System;
+using Shesha.Elmah;
 using System.Text;
 
 namespace bonolo.shesha
@@ -31,7 +32,8 @@ namespace bonolo.shesha
         typeof(SheshaImportModule),
         typeof(SheshaClickatellModule),
         typeof(sheshaModule),
-        typeof(sheshaApplicationModule)
+        typeof(sheshaApplicationModule),
+        typeof(SheshaElmahModule)
 	 )]
     public class sheshaWebCoreModule : AbpModule
     {

@@ -1,27 +1,27 @@
 ﻿using FluentMigrator;
 using Shesha.FluentMigrator;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace bonolo.shesha.Domain.Migrations
+namespace shesha.app.Domain.Migrations
 {
-    [Migration(20250814135900)]
-    public class M20250814135900 : Migration
+    [Migration(20250819080702)]
+    public class M20250819080702 : Migration
     {
+
         public override void Up()
         {
             Create.Table("shesha_Municipalities")
-                .WithIdAsGuid("Id")
+                .WithIdAsGuid()
                 .WithFullAuditColumns()
                 .WithColumn("Name").AsString().NotNullable()
                 .WithColumn("Type").AsString().Nullable()
                 .WithColumn("Address").AsString().Nullable()
-                .WithColumn("ContactPerson").AsString().Nullable()
                 .WithColumn("Email").AsString().Nullable()
-                .WithColumn("ContactNumber").AsString().Nullable();
+                .WithColumn("ContactNumber").AsString().Nullable()
+                .WithForeignKeyColumn("ContactPersonId", "Core_Persons").Nullable();
+
+            Alter.Table("Core_Persons")
+                .AddForeignKeyColumn("MunicipalityId", "shesha_Municipalities");
         }
 
         public override void Down()

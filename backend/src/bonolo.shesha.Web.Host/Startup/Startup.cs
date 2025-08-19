@@ -39,6 +39,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.IO;
+using Shesha.Elmah;
 using System.Reflection;
 
 namespace bonolo.shesha.Web.Host.Startup
@@ -142,7 +143,7 @@ namespace bonolo.shesha.Web.Host.Startup
 
 		public void Configure(IApplicationBuilder app, IBackgroundJobClient backgroundJobs)
 		{
-			app.UseElmah();
+			app.UseSheshaElmah();
 
 			// note: already registered in the ABP
 			AppContextHelper.Configure(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
