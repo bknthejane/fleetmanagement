@@ -11,8 +11,7 @@ namespace shesha.app.Domain.Migrations
         public override void Up()
         {
             Alter.Table("Core_Persons")
-         // Change "MunicipalityId" to "shesha_MunicipalityId"
-         .AddForeignKeyColumn("shesha_MunicipalityId", "shesha_Municipalities");
+            .AddForeignKeyColumn("shesha_MunicipalityId", "shesha_Municipalities");
         }
 
         public override void Down()
