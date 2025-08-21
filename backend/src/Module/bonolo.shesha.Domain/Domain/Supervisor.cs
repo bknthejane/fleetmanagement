@@ -1,6 +1,7 @@
 ﻿using Shesha.Domain;
 using Shesha.Domain.Attributes;
 using System;
+using System.Collections.Generic;
 
 namespace bonolo.shesha.Domain.Domain
 {
@@ -9,5 +10,7 @@ namespace bonolo.shesha.Domain.Domain
     {
         public virtual string Department { get; set; }
         public virtual Municipality Municipality { get; set; }
+
+        public virtual IList<JobCard> JobCards { get; set; } = new List<JobCard>();
     }
 }
