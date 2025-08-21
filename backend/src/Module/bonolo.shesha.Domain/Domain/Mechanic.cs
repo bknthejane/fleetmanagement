@@ -24,8 +24,9 @@ namespace bonolo.shesha.Domain.Domain
         public virtual Municipality Municipality { get; set; }
 
         //public virtual Guid? AssignedJobCardId { get; set; }
-        //[ForeignKey("AssignedJobCardId")]
-        //public virtual JobCard AssignedJobCard { get; set; }
-        //public virtual string AssignedJobCardNumber { get; set; }
+        [Column("shesha_AssignedJobCardId")]
+        public virtual JobCard AssignedJobCard { get; set; }
+        [Column("shesha_AssignedJobCardNumber")]
+        public virtual string AssignedJobCardNumber { get; set; }
     }
 }
